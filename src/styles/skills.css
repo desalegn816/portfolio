@@ -1,0 +1,40 @@
+.skills__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.skill-card {
+  padding: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+.skill-card:hover { transform: translateY(-3px); border-color: rgba(56, 189, 248, 0.5); }
+.skill-card__head { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem; }
+.skill-card__icon { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; color: var(--accent-2); background: var(--accent-2-soft); border-radius: 10px; }
+.skill-card h3 { font-size: var(--fs-h3); line-height: 1.3; }
+.skill-card__items { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.skill-card__items li { padding: 0.35rem 0.8rem; font-size: 0.88rem; color: var(--text); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); border-radius: 8px; }
+
+@media (max-width: 960px) { .skills__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .skills__grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ===== Development approach (connected cards) ===== */
+.approach__steps { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; counter-reset: step; }
+.approach-step { position: relative; padding: 1.5rem; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-md); }
+.approach-step__number { display: grid; place-items: center; width: 36px; height: 36px; margin-bottom: 1rem; font-weight: 800; font-size: 0.95rem; color: #fff; background: var(--accent); border-radius: 50%; }
+.approach-step h3 { margin-bottom: 0.5rem; font-size: var(--fs-h3); line-height: 1.3; }
+.approach-step p { font-size: 0.95rem; color: var(--text-muted); }
+/* Connector line between cards on wide screens. */
+.approach-step:not(:last-child)::after { content: ''; position: absolute; top: 2.3rem; left: calc(100% + 1px); width: 1.25rem; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+
+@media (max-width: 1000px) {
+  .approach__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .approach-step::after { display: none; }
+}
+@media (max-width: 560px) {
+  .approach__steps { grid-template-columns: minmax(0, 1fr); padding-left: 0; }
+}
+
+/* ===== Learning ===== */
+.learning__list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }
+.learning__list li { padding: 1rem 1.1rem; font-size: 0.95rem; font-weight: 600; background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent-2); border-radius: var(--radius-sm); }
+@media (max-width: 960px) { .learning__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .learning__list { grid-template-columns: minmax(0, 1fr); } }

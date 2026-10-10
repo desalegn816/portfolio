@@ -1,0 +1,12 @@
+.footer { padding-block: 2.5rem 1.75rem; background: var(--bg-alt); border-top: 1px solid var(--border); }
+.footer__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem 2rem; }
+.footer__brand { display: flex; align-items: center; gap: 0.9rem; }
+.footer__name { font-weight: 700; }
+.footer__role { font-size: var(--fs-small); color: var(--text-muted); }
+.footer__links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+.footer__links a { display: inline-block; padding: 0.4rem 0; font-size: 0.92rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s var(--ease); }
+.footer__links a:hover { color: var(--text); }
+.footer__social { display: flex; gap: 0.6rem; }
+.footer__social a { display: grid; place-items: center; width: 44px; height: 44px; color: var(--text-muted); border: 1px solid var(--border); border-radius: 12px; transition: color 0.2s var(--ease), border-color 0.2s var(--ease); }
+.footer__social a:hover { color: var(--accent-2); border-color: var(--accent-2); }
+.footer__copy { margin-top: 1.75rem; padding-top: 1.25rem; font-size: var(--fs-small); color: var(--text-muted); border-top: 1px solid var(--border); }
